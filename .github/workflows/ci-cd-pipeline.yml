@@ -30,7 +30,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: your-dockerhub-username/my-static-website:latest
+          tags: adminjoy/my-static-website:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -44,9 +44,8 @@ jobs:
           username: ${{ secrets.AZURE_VM_USERNAME }}
           key: ${{ secrets.AZURE_VM_PRIVATE_KEY }}
           script: |
-            docker pull your-dockerhub-username/my-static-website:latest
+            docker pull adminjoy/my-static-website:latest
             docker stop my-static-website || true
             docker rm my-static-website || true
             docker run -d -p 80:80 --name my-static-website your-dockerhub-username/my-static-website:latest
 
-            

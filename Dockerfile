@@ -1,4 +1,4 @@
-# Use an official Nginx image as a base image
+# Use an official Nginx image for a base image
 FROM nginx:alpine
 
 # Copy the static website content into the Nginx server directory

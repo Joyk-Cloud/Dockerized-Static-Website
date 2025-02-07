@@ -47,5 +47,5 @@ jobs:
             docker pull adminjoy/my-static-website:latest
             docker stop my-static-website || true
             docker rm my-static-website || true
-            docker run -d -p 80:80 --name my-static-website your-dockerhub-username/my-static-website:latest
+            docker run -d -p 80:80 --name my-static-website adminjoy/my-static-website:latest
 
